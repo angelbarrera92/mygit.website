@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+        integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <title>MyGit.website</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        MyGit.website
+                    </h2>
+                    <p>
+                        Fucking easy to publish a website in a devops way.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <dl>
+                    <dt>
+                        1. Register your github repository
+                    </dt>
+                    <dd>
+                        Use the fucking form on your right to register your github repository and we'll send you the webhook settings by mail.
+                    </dd>
+                    <dt>
+                        2. The email from devops@mygit.website
+                    </dt>
+                    <dd>
+                        In the damn email content you will find the
+                        <code>payload url</code> and the
+                        <code>secret</code>.
+                    </dd>
+                    <dt>
+                        3. Don't be an asshole and set it up
+                    </dt>
+                    <dd>
+                        Shit, setting up a
+                        <code>JSON (application/json)</code> webhook in github is the easiest thing in the world, but if you have problems,
+                        <a href="https://developer.github.com/webhooks/creating/">RTFM</a>.
+                    </dd>
+                    <dt>
+                        4. If you've made it this far, you're a champion. Sarcasm
+                    </dt>
+                    <dd>
+                        Add the file
+                        <code>.mygit.website.yml</code> to your repository. Setting it up is very easy. Indicate the path where your website is located
+                        inside the repository, indicate the start and error pages. Push it.
+                    </dd>
+                    <dt>
+                        5. Too difficult?
+                    </dt>
+                    <dd>
+                        Take an example in this
+                        <a href="https://github.com/angelbarrera92/s3site/blob/master/.mygit.website.yml">repository</a> and, to top it off, down here:
+                        <pre><code>
+path: dist # The path where you have the website inside the repository
+index: index.html # The index file
+error: error.html # The error file
+                        </code></pre>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <form role="form">
+                    <div class="form-group">
+
+                        <label for="exampleInputEmail1">
+                            Email address
+                        </label>
+                        <input class="form-control" id="email" type="email" placeholder="loser@front.website" />
+                    </div>
+                    <div class="form-group">
+
+                        <label for="exampleInputPassword1">
+                            Github repository
+                        </label>
+                        <input class="form-control" id="repository" type="text" placeholder="https://github.com/loser/repository (Without .git termination)"
+                        />
+                    </div>
+                    <button type="button" class="btn btn-primary" id="register">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>E2E Example
+                    <small class="text-muted">raw video</small>
+                </h3>
+                <iframe src="https://player.vimeo.com/video/262701474" width="640" height="359" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="response">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Messages</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="messages"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 footerleft ">
+                    <div class="logofooter"> MyGit.website</div>
+                    <p>Devops side project. Solves one of the big gaps between the operations department and the frontend developers</p>
+                    <p>
+                        <i class="fa fa-map-pin"></i>Developed in a place in Madrid where I don't want to remember</p>
+                    <p>
+                        <i class="fa fa-envelope"></i>email: angelbarrerasanchez[@]gmail.com</p>
+
+                </div>
+                <div class="col-md-4 col-sm-6 paddingtop-bottom">
+                    <h6 class="heading7">News</h6>
+                    <div class="post">
+                        <p>First Release
+                            <span>7th april, 2018</span>
+                        </p>
+                        <p>Official site at <a href="https://github.com/angelbarrera92/mygit.website">github</a>
+                            <span>8th april, 2018</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--footer start from here-->
+
+    <div class="copyright">
+        <div class="container">
+            <div class="col-md-6">
+                <p>© 2018 - All Rights with MyGit.website</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+        crossorigin="anonymous"></script>
+    <script src="./js/form.js"></script>
+</body>
+
+</html>
