@@ -10,7 +10,7 @@ function submitForm() {
     var email = $("#email").val();
 
     $.ajax({
-        url: "https://api.dev.mygit.website/github/register",
+        url: "https://api.mygit.website/github/register",
         type: "POST",
         data: JSON.stringify({
             'repository': repository,
