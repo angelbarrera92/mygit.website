@@ -1,0 +1,3 @@
+path: dist # The path where you have the website inside the repository
+index: index.html # The index file
+error: error.html # The error file
