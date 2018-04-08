@@ -15,7 +15,7 @@ Shit, setting up a `JSON (application/json)` webhook in github is the easiest th
 Add the file `.mygit.website.yml` to your repository. Setting it up is very easy. Indicate the path where your website is located inside the repository, indicate the start and error pages. Push it. 
 
 ### Too difficult?
-[Take an example in this repository](./.mygit.website) and, to top it off, down here:
+[Take an example in this repository](./.mygit.website.yml) and, to top it off, down here:
 
 ```bash
 path: dist # The path where you have the website inside the repository
